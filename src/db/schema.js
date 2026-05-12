@@ -1,6 +1,6 @@
 import { pgTable, pgEnum, serial, integer, jsonb, text, timestamp } from 'drizzle-orm/pg-core';
 
-export const matchStatusEnum = pgEnum('match_status', ['pending', 'in_progress', 'completed']); 
+export const matchStatusEnum = pgEnum('match_status', ['scheduled', 'live', 'finished']); 
 
 export const matches = pgTable('matches', {
     id: serial('id').primaryKey(),
